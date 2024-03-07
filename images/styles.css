@@ -1,0 +1,503 @@
+/* MAPLE POP DESIGNS
+================================================================== */
+
+
+
+
+
+/* BASE STYLES
+================================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: fit-content;
+}
+
+body {
+  background: #FFFFFF;
+  color: #333333;
+  margin: 0;
+  padding: 0;
+  display: block;
+  overflow-x: hidden;
+  width: 100vw;
+  max-width: 100%;
+  margin: 0;
+  position: relative;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+
+/* HEADER
+================================================================== */
+header {
+  background-color:  #E8B121;
+  color: #fff;
+  padding: 10px;
+  text-align: right;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-items: end;
+  justify-content: end;
+  align-items: center;
+  align-content: center;
+  gap: 10px;
+  padding-right: 80px;
+}
+
+header a {
+  display: block;
+  width: 40px;
+}
+
+header h4 {
+  display: none;
+}
+
+
+
+
+
+/* LOGO
+================================================================== */
+.logo {
+  max-width: 1400px;
+  margin: 64px auto 32px auto;
+  padding: 10px;
+}
+
+.logo img {
+  display: block;
+  margin: 0;
+  width: 400px;
+  max-width: 50vw;
+  min-width: 100px;
+}
+
+
+
+
+/* NAV
+================================================================== */
+nav {
+  display: none;
+}
+
+nav a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 24px;
+  padding-bottom: 10px;
+  transition: all 0.5s;
+}
+
+nav a:hover {
+  color: #E8B121;
+  opacity: 100%;
+}
+
+
+
+
+
+/* MAIN
+================================================================== */
+main {
+  padding: 10px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.main-content {
+  border-left: 4px solid #E77A00;
+  padding: 10px;
+  position: relative;
+}
+
+
+
+
+
+/* TYPOGRAPHY
+================================================================== */
+
+h1 {
+  /* HELLO! */
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 1;
+  color: #2B2827;
+  margin-left: 50px;
+}
+
+h2 {
+  /* At maple pop designs we bring your ideas to life & make them pop */
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.2;
+  text-align: right;
+  text-transform: uppercase;
+  color: #E8B121;
+  margin-right: 75px;
+  margin-left: auto;
+  /* margin-top: -100px; */
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1;
+  color: #E8B121;
+  margin: 64px auto;
+  width: 100%;
+  margin-left: 50px;
+}
+
+h4 {
+  font-weight: 400;
+  color: #fff;
+}
+
+h5 {
+  font-weight: 700;
+  font-size: 32px;
+  margin: 0;
+  line-height: 1.3;
+}
+
+h6 {
+  font-weight: 400;
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 48px;
+  line-height: 1.3;
+}
+
+p {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #333333;
+}
+
+a {
+  color: inherit;
+  transition: all 0.5s;
+}
+
+a:hover {
+  opacity: 50%;
+}
+
+
+
+
+
+/* INTRO
+================================================================== */
+.intro {
+  min-height: 50vh;
+}
+
+.brand-element {
+  position: absolute;
+  width: 100px;
+  right: -80px;
+  top: -5px;
+  z-index: -1;
+  scale: 160%;
+}
+
+
+
+
+
+/* WORK
+================================================================== */
+.work {
+  padding: 32px 0;
+}
+
+.slideshow-selector {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-left: 50px;
+}
+
+.slideshow-selector h3 {
+  cursor: pointer;
+  margin: 10px auto;
+  opacity: 30%;
+  transition: all 0.5s;
+}
+
+.slideshow-selector h3:hover {
+  opacity: 50%;
+}
+
+.slideshow-selector h3.selected {
+  opacity: 100%;
+}
+
+.slideshow {
+  position: absolute;
+  z-index: -1;
+  min-height: 75vh;
+  margin: 32px 0;
+  translate: 64px 0;
+  opacity: 0%;
+  height: 0;
+  overflow: hidden;
+}
+
+.active-slideshow {
+  translate: 0 0;
+  opacity: 100%;
+  position: relative;
+  z-index: 1;
+  transition: all 0.5s;
+  height: auto;
+}
+
+.slide {
+  position: absolute;
+  z-index: -1;
+  margin-right: 48px;
+  margin-left: 48px;
+  translate: 64px 0;
+  opacity: 0%;
+  overflow: hidden;
+  top: 0;
+  height: 100%;
+}
+
+.active-slide {
+  translate: 0 0;
+  opacity: 100%;
+  position: relative;
+  z-index: 1;
+  transition: all 0.5s;
+}
+
+.next-slide {
+  position: absolute;
+  right: 10px;
+  top: 45%;
+  width: 32px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.next-slide:hover {
+  opacity: 50%;
+}
+
+
+
+
+/* ABOUT
+================================================================== */
+.about {
+  padding: 32px 0;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 120px auto;
+  gap: 10px;
+  align-items: end;
+  justify-items: center;
+}
+
+.portrait {
+  max-width: 260px;
+  align-self: center;
+}
+
+.email {
+  word-break: break-all;
+  display: block;
+  margin-bottom: 64px;
+}
+
+.instagram {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+  justify-content: start;
+  align-items: center;
+  align-content: center;
+  color: inherit;
+  text-decoration: none;
+  position: absolute;
+  bottom: -12px;
+  transition: all 0.5s;
+}
+
+.instagram:hover {
+  opacity: 50%;
+}
+
+.instagram img {
+  display: block;
+  margin: 0;
+  width: 40px;
+}
+
+.border-arrow {
+  height: 4px;
+  width: 110px;
+  background: #E77A00;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.border-arrow-head-1 {
+  width: 24px;
+  height: 4px;
+  background: #E77A00;
+  position: absolute;
+  right: -5px;
+  top: 7px;
+  rotate: -45deg;
+  border-radius: 2px;
+}
+
+.border-arrow-head-2 {
+  width: 24px;
+  height: 4px;
+  background: #E77A00;
+  position: absolute;
+  right: -5px;
+  top: -7px;
+  rotate: 45deg;
+  border-radius: 2px;
+}
+
+
+
+
+/* BOTTOM OF PAGE BRAND ELEMENTS
+================================================================== */
+.brand-element-cropped img {
+  display: block;
+  margin: 0;
+}
+
+.brand-element-maple {
+  width: 400px;
+  margin-right: 5vw;
+  margin-left: auto;
+  height: 0px;
+  max-width: 50vw;
+}
+
+.brand-element-cropped {
+  position: absolute;
+  left: -200px;
+  width: 600px;
+}
+
+
+
+/* MEDIA QUERIES
+================================================================== */
+
+@media (min-width: 1080px) {
+
+
+  .intro {
+    min-height: 75vh;
+  }
+
+  h2 {
+    margin-top: -100px;
+  }
+  
+  header h4 {
+    display: block;
+  }  
+
+  .logo {
+    padding-left: 110px;
+  }
+
+  nav {
+    display: block;
+  }
+
+  main {
+    grid-template-columns: 200px auto;
+  }
+
+  h1 {
+    font-size: 150px;
+    margin-right: 300px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-right: 200px;
+  }
+
+  h3 {
+    font-size: 48px;
+  }
+
+  .brand-element {
+    width: 200px;
+  }
+
+  .slideshow-selector {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .border-arrow {
+    width: 48%;
+  }
+
+  .brand-element-cropped {
+    position: absolute;
+    left: 50px;
+    bottom: -260px;
+    width: 600px;
+    max-width: 75vw;
+  }
+
+  .brand-element-cropped {
+    left: -300px;
+    width: 750px;
+  }
+
+  .brand-element-cropped img {
+    scale: 140%;
+  }
+  
+  .brand-element-maple {
+    margin-top: -100px;
+  }
+
+}
