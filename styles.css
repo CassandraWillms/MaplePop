@@ -156,7 +156,7 @@ h2 {
   color: #E8B121;
   margin-right: 75px;
   margin-left: auto;
-  margin-top: -100px;
+  /* margin-top: -100px; */
 }
 
 h3 {
@@ -214,7 +214,7 @@ a:hover {
 /* INTRO
 ================================================================== */
 .intro {
-  min-height: 75vh;
+  min-height: 50vh;
 }
 
 .brand-element {
@@ -398,18 +398,9 @@ a:hover {
 
 /* BOTTOM OF PAGE BRAND ELEMENTS
 ================================================================== */
-.brand-element-cropped {
-  position: absolute;
-  left: 50px;
-  bottom: -260px;
-  width: 600px;
-  max-width: 75vw;
-}
-
 .brand-element-cropped img {
   display: block;
   margin: 0;
-  scale: 140%;
 }
 
 .brand-element-maple {
@@ -418,10 +409,13 @@ a:hover {
   margin-left: auto;
   height: 0px;
   max-width: 50vw;
-  margin-top: -100px;
 }
 
-
+.brand-element-cropped {
+  position: absolute;
+  left: -200px;
+  width: 600px;
+}
 
 
 
@@ -429,6 +423,15 @@ a:hover {
 ================================================================== */
 
 @media (min-width: 1080px) {
+
+
+  .intro {
+    min-height: 75vh;
+  }
+
+  h2 {
+    margin-top: -100px;
+  }
   
   header h4 {
     display: block;
@@ -448,6 +451,7 @@ a:hover {
 
   h1 {
     font-size: 150px;
+    margin-right: 300px;
   }
   
   h2 {
@@ -476,8 +480,24 @@ a:hover {
   }
 
   .brand-element-cropped {
+    position: absolute;
+    left: 50px;
+    bottom: -260px;
+    width: 600px;
+    max-width: 75vw;
+  }
+
+  .brand-element-cropped {
     left: -300px;
     width: 750px;
+  }
+
+  .brand-element-cropped img {
+    scale: 140%;
+  }
+  
+  .brand-element-maple {
+    margin-top: -100px;
   }
 
 }
